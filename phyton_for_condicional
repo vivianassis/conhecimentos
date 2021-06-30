@@ -1,4 +1,4 @@
-omes = ['Matheus', 'João', 'Jorge', 'Pedro']
+nomes = ['Matheus', 'João', 'Jorge', 'Pedro']
 numeros = [1, 2, 3, 4, 5, 6]
 
 for nome in nomes:

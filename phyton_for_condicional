@@ -8,7 +8,7 @@ for numero in numeros:
     if numero == 1:
         print ("Eu tenho " + str(numero) + " sorvete.")
     else:
-        print ("Eu tenho  " + str(numero) + " sorvetes.")
+        print ("Eu tenho " + str(numero) + " sorvetes.")
 
 for numero in numeros:
     print(3 * numero)

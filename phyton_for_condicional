@@ -1,0 +1,43 @@
+omes = ['Matheus', 'João', 'Jorge', 'Pedro']
+numeros = [1, 2, 3, 4, 5, 6]
+
+for nome in nomes:
+    print("Olá, " + nome)
+
+for numero in numeros:
+    if numero == 1:
+        print ("Eu tenho " + str(numero) + " sorvete.")
+    else:
+        print ("Eu tenho  " + str(numero) + " sorvetes.")
+
+for numero in numeros:
+    print(3 * numero)
+
+for nome in nomes:
+    if nome == "Matheus":
+        print(nome + ", você é o amor da Vivi.")
+    elif nome == "João":
+        print(nome + ", você é o bebê da Vivi.")
+    else:
+        print(nome + " é um desconhecido, cuidado!")
+
+Olá, Matheus
+Olá, João
+Olá, Jorge
+Olá, Pedro
+Eu tenho 1 sorvete.
+Eu tenho  2 sorvetes.
+Eu tenho  3 sorvetes.
+Eu tenho  4 sorvetes.
+Eu tenho  5 sorvetes.
+Eu tenho  6 sorvetes.
+3
+6
+9
+12
+15
+18
+Matheus, você é o amor da Vivi.
+João, você é o bebê da Vivi.
+Jorge é um desconhecido, cuidado!
+Pedro é um desconhecido, cuidado!

@@ -1,0 +1,117 @@
+Vamos lá. Para quem está aprendendo programação para web, é indispensável conhecer alguns temas e entre eles o famoso HTTP (hypertext trasfer protocol), em conjunto com oTCP-IP (TCP - transferencia das informações/IP- cuida do endereço) são essenciais de se aprender também. 
+
+Nesse post, vou descrever de forma objetiva alguns aspectos desse mundo de eventos que acontecem quando queremos acessar a internet.
+
+----
+
+Ta... Mas o que é o HTTP?
+
+- é aquilo que diz como que uma máquina (cliente) se comunica com outra (servidor). Ele se utiliza do modelo de (requisição-resposta) para informar ao local onde está o que nós estamos querendo acessar (um site, por exemplo) que estamos requisitando ele, e se encarrega de nos mostrar em resposta, todo o conteúdo referente aquele pedido, em nossa tela.
+
+----
+
+O HTTP trabalha com verbos, eles são os responsáveis pela principal parte da requisição, e informam ao servidor O QUE estamos querendo dele.
+
+- São os 8 verbos HTTP:
+
+GET HEAD POST (os mais usados);
+
+PUT DELETE TRACE OPTIONS CONNECT
+
+--
+
+
+
+Vamos entender um pouquinho de cada um dos verbos agora:
+
+
+- GET: Solicita informações e lê o conteúdo inteiro
+
+- HEAD: Solicita informações e lê só o cabeçalho (bom pra pegar metadados)
+
+- POST: Envia conteúdo e cria registro de cada requisição
+
+- PUT: Envia conteúdo e sobrescreve os dados deixando um registro só
+
+- DELETE: Apaga o recurso
+
+- TRACE: Ratreia o que você pediu para saber quais e com que os servidores estão lidando com o pedido.
+
+- OPTIONS: Usado para saber quais métodos o HTTP aceita (tipo o -help)
+
+- CONNECT: Cria conexões por exemplo, conexões seguras quando possível.
+
+----
+
+Sabendo que o protocolo HTTP trabalha com requisição-resposta, uma das partes que da uma visão geral da resposta que recebemos, é o código de retorno. Existe uma lista completa de cada significado dos códigos de retorno, mas temos como analisar 'basicamente' cada um deles através do primeiro número da centena, assim:
+
+1xx- Information
+
+2xx- Sucess
+
+3xx- Redirection
+
+4xx- Cliet error
+
+5xx- Server error
+
+----
+
+* Exemplo de pedido (requisição)= linha de pedido, cabeçalho, corpo
+
+--Linha de pedido = Metodo + RI(endereço) + versão (geralmente será a 1.1), ficando da seguinte maneira:
+
+GET /index.html HTTP/1.1
+
+--
+
+--Cabeçalho
+
+Host: www.exemplo.com
+
+Accept-Language: pt-br
+
+User-Agent: Mozilla/5.0
+
+Onde: Accept(O que eu aceito receber, no exemplo, liguagem), useragent(navegador), Host(servidor).
+
+A resposta para esse pedido será a página principal (index.html) armazenada nesse endereço (exemplo.com)
+
+----
+
+- Entendendo TCP-IP
+
+Essa é uma sigla para os carinhas que ajudam seu pedido a percorrer o caminho do cliente(sua máquina) para o servidor (onde fica armazenada sua informação).
+
+* TCP- É o responsável pela integridade da informação, tanto na requisição, quanto na resposta. Ele garante que aquilo que está sendo transportado chegue 'inteiro' ao destino, seja este o servidor ou o cliente. É ele também que contorna os problemas (como os de internet, por exemplo) pelo caminho para garantir que seu propósito seja cumprido. Bem legal, certo?
+
+* IP- É o responsável por por etiquetar o cliente e o servidor com seu endereço. Cada dispositivo na rede mundial de computadores tem um endereço, um número que o indentifica. Esse número também é conhecido como IP. Mas não é só para isso que esse protocolo serve. Ele também divide as informações (em pacotes IP, por meio da comutação de pacotes). Esse procedimento tem vantagens como, por exemplo, o compartilhamento desses pacotes por vários usuários (o que diminui os custos) e a facilidade de usar diversas rotas para transportá-los (em conjunto com o TCP, isso torna a internet resiliente com relação às falhas em uma rota, pois ela simplesmente vai usar outra rota alternativa e, para o cliente, tudo funcionará normalmente).
+
+--
+
+Extras: 
+
+* DNS (Sistema de nomes e domínios)
+
+É o tradutor que transforma o endereço do site ou e-mail, em um endereço que possa ser entendido pela máquina, ou seja, no  endereço IP onde ele está localizado. Assim podemos digitar o endereço web de um site, ao invés de seu IP, sua função é facilitar para nós humanos não precisarmos decorar tantos IPs. 
+
+Podemos memorizar endereços bem melhor, e o DNS traduz assim que enviamos o pedido, para o respectivo IP do site. 
+
+* HTTPS 
+
+É uma versão do http com uma camada a mais de criptografia, usada para aumentar ainda mais a 'segurança'(S) daquele site.
+
+--
+
+Conclusão
+
+Sabendo mais sobre os protocolos seus protocolos HTTP, TCP-IP, e um pouquinho de DNS conseguimos entender melhor como a internet funciona. Se trata de um enorme serviço de envio e recebimento de informações, orquestrados por esses super importantes, e outros protocolos mais específicos. 
+
+Lembrando que esse foi um início. 
+
+Como diz o ditado, ''O desenvolvimento é uma maratona, não uma corrida de 100m.'' 
+Saber no que estamos mexendo é sempre útil, certo!? Então nunca parar de estudar e querer aprender sobre tecnologia é o que nos torna desenvolvedores melhores. 
+
+--
+
+Gostou do artigo? Deixe o gostei, ou apoio. Ficou com dúvidas ou gostaria de acrescentar algo legal? Me manda mensagem no privado. Estou sempre disponível para críticas construtivas, elas tornam qualquer artigo ainda mais cheio de valor.

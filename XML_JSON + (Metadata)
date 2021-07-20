@@ -1,0 +1,39 @@
+XML e JSON
+Significado: XML(Extensive Markup Language) e JSON(JavaScript Object Notation). 
+
+O que são e para que servem?
+
+Essas são duas formas de se fazer o mesmo serviço: agrupar dados referentes a uma variável e servir como um formato leve de troca de informações/dados entre sistemas.
+As diferenças entre as duas, apesar de não serem muitas, fazem com que ambas pareçam coisas bem diferentes quando na verdade, só o que mais muda é a aparência e os seus casos de uso.
+Enquanto que o XML usa tags, parecidas como no HTML (porém no XML você cria suas tags), no JSON se usa as chaves para delimitar cada conjunto de dados (criando objetos).
+
+Exemplo de XML
+<?xml version="1.0" ?>
+- <pessoa>
+   <nome>Viviana de Assis</nome>
+   <idade>29 anos</idade>
+   <email>vivianassis11@gmail.com</email>
+</pessoa>
+
+Exemplo de JSON
+{
+"pessoa": {
+  "nome": "Viviana de Assis"
+  "idade": "29 anos"
+  "email": ["vivianassis11@gmail.com",
+          "vivianassis12@outlook.com"]
+  }
+}
+
+Como podemos ver, ambas fazem o mesmo objetivo, mas de maneiras diferentes (geralmente o JSON é mais fluido e amigável para humanos), mas o XML ainda é bastante usado para guardar dados mais complexos por sua experiência nessa função, por ser mais antigo que o JSON, ainda sendo bastante visto embora esteja aos poucos, perdendo espaço para o segundo.
+
+Para entender o porquê de agrupar dados em um objeto é preciso entender um pouco de outro conceito. Os metadados.
+Metadados são, básica e literalmente, dados sobre dados, e são usados para especificar objetos dentro deles mesmos, ou seja sem que tudo apareça para o usuário final, embora os metadados ainda existam (e, assim ainda continuam ajudando por exemplo, o buscados a mostrar os melhores resultados para uma busca web).
+
+Alguns exemplos práticos suficientes para entender metadados são:
+- Dados sobre as imagens (Data e hora da foto, por exemplo, ou tags referentes ao local, ou ao tema)
+- Dados sobre músicas (Álbum ao qual ela pertence, Cantor, ano de lançamento, estilo musical)
+- Dados sobre sites (Palavras-chave(SEO), local de publicação(o país), tags relacionadas, ou linguagem usada para escrever o site)
+
+Geralmente os metadados são usados no intuito de personalizar cada vez mais a navegação do usuário, ou ainda facilitar o acesso dos programadores à determinadas informações referentes aos bancos de dados, como por exemplo, buscar apenas nome, ou apenas emails.
+Por isso cada vez mais, é importante que as linguagens nas quais esses dados são guardados, sua importância e usabilidade, sejam conhecidas e padronizadas para evitar falhas em seu acesso, armazenamento e segurança.
